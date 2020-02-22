@@ -2,9 +2,6 @@ header {
   height: 95px;
   border-bottom: 6px solid #323746;
   background-color: #2d303a;
-  font-family: "Lato";
-  font-weight: 700;
-  color: white;
   box-sizing: border-box;
 }
 
@@ -21,7 +18,10 @@ header {
 .logo {
   margin: 0 0 1px 40px;
   font-size: 25px;
+  font-family: "Lato";
+  font-weight: 700;
   letter-spacing: -0.6px;
+  color: white;
 }
 
 span {
@@ -48,7 +48,9 @@ span {
   font-weight: 400;
   letter-spacing: -0.25px;
   text-decoration: none;
-  color: #ffffff;
+  font-family: "Lato";
+  font-weight: 700;
+  color: white;
 }
 
 li.content :before {
@@ -62,7 +64,7 @@ li.content :before {
   color: #f06c64;
 }
 
-main {
+.slider {
   height: 600px;
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
@@ -73,7 +75,7 @@ main {
   box-sizing: border-box;
 }
 
-footer {
+section {
   height: 500px;
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
@@ -91,7 +93,7 @@ footer {
   margin: 0 auto;
 }
 
-.h1_footer {
+.h1_services {
   padding-top: 62px;
   padding-left: 39px;
   font-family: "Lato";
@@ -131,32 +133,22 @@ footer {
   cursor: pointer;
 }
 
-.services {
-  margin-left: 40px;
+section > div > .services_text {
+  margin-right: 41px;
+  margin-top: 21px;
+  margin-left: 39px;
   font-family: "Lato";
   font-weight: 300;
-  font-size: 17.5px;
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 1.7em;
+  text-align: justify;
   color: #767e9e;
 }
 
-footer .up_p {
-  margin-top: 22px;
-  margin-left: 39px;
-  margin-right: 0px;
-  letter-spacing: 0.37px;
-  line-height: 0.6em;
-}
-
-.low_p {
-  margin-right: 120px;
-  margin-top: 0px;
-  margin-left: 39px;
-  letter-spacing: 0.2px;
-}
-
-footer div p {
-  padding-top: 10px;
-  padding-right: 21px;
+section div .text_grid {
+  margin-top: 10px;
+  margin-right: 20px;
   font-family: "Lato";
   font-weight: 400;
   font-size: 12px;
@@ -168,24 +160,29 @@ footer div p {
 
 .container {
   display: grid;
-  grid-template-columns: 79px 240px 80px 240px 80px 240px;
+  grid-template-columns: 79px 240px 79px 240px 81px 239px;
   grid-template-rows: 123px 90px;
-  margin-top: 44px;
+  margin-top: 45px;
   padding-left: 40px;
 }
 
-.footer_header {
+.service_header {
   font-family: "Lato";
   font-weight: 900;
   font-size: 18px;
-  letter-spacing: -0.18px;
+  letter-spacing: -0.1px;
   color: #666d89;
 }
 
 .a {
+  margin-left: 1px;
   letter-spacing: -0.1px;
 }
 
 .icons {
-  padding-top: 2px;
+  margin-top: 2px;
+}
+
+.icons.star_heart {
+  margin-left: 1px;
 }
