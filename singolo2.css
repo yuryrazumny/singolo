@@ -99,11 +99,13 @@ p.buttons.b4 {
 
 .container {
     display: grid;
+    max-height: 617px;
     grid-template-columns: repeat(4, 220px);
     grid-template-rows: repeat(3, 187px);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     padding-top: 16px;
+    overflow: hidden;
 }
 
 .about_us h1 {
@@ -124,14 +126,72 @@ p.buttons.b4 {
 
 .container.photo {
     display: grid;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-rows: 300px 75px 50px;
+    grid-template-columns: 300px 302px 302px;
+    grid-template-rows: 300px 130px;
     grid-column-gap: 19px;
-    grid-row-gap: 15px;
+    grid-row-gap: 17px;
     padding-top: 45px;
-    padding-left: -1px;
 }
 
 .scolara {
-    margin-left: 2px;
+    margin-left: 0px;
+}
+
+h2 {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 900;
+    color: #666d89;
+    letter-spacing: -0.2px;
+}
+
+p.text.Adam::first-line {
+    letter-spacing: -0.06px;
+}
+
+p.text {
+    padding-top: 10px;
+    padding-right: 0;
+    margin-right: 0;
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.75em;
+    text-align: left;
+    color: #767e9e;
+}
+
+p.text.Desmond::first-line {
+    letter-spacing: 0.14px;
+}
+
+p.text.Scolara::first-line {
+    letter-spacing: 0.13px;
+}
+
+img.social:first-child {
+    margin-right: 4px;
+}
+
+img.social {
+    margin-top: 24px;
+    margin-right: 3px;
+    margin-left: 1px;
+}
+
+img.social_Visari {
+    margin-top: 24px;
+    margin-right: 4px;
+}
+
+img.social:hover {
+    background-color: #c5c5c5;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+img.social_Visari:hover {
+    background-color: #c5c5c5;
+    border-radius: 50px;
+    cursor: pointer;
 }
