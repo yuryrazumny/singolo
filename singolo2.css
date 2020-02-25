@@ -1,0 +1,121 @@
+.portfolio {
+    height: 870px;
+    background-color: #2d303a;
+    box-sizing: border-box;
+}
+
+.about_us {
+    height: 734px;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: block;
+    justify-content: space-between;
+    max-width: 1020px;
+    height: 100%;
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+h1 {
+    padding-top: 63px;
+    font-family: Lato;
+    font-size: 30px;
+    font-weight: 900;
+    color: #666d89;
+    letter-spacing: -0.2px;
+}
+
+p {
+    padding-top: 27px;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 300;
+    color: #767e9e;
+}
+
+.navbar {
+    width: 372px;
+    /*padding-top: 17px;*/
+    /*padding-left: 9px;*/
+  }
+  
+  .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+  }
+
+  .navbar ul li p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: "Lato";
+    font-weight: 400;
+    border: 1px solid #666d89;
+    padding: 0px;
+    margin: 0px;
+    color: #767e9e;
+    border-radius: 5px;
+    padding: 4px 6px 4px 6px;
+    margin-top: 17px;
+    margin-left: -1px;
+    margin-right: 0;
+    margin-bottom: 3px;
+  }
+
+  .b1 {
+      margin-left: 20px;
+    width: 13px;
+    color: #dedede;
+    border-color: #c5c5c5;
+  }
+
+  .navbar ul li p .buttons .b2 {
+    width: 2444px;
+    letter-spacing: -0.2px;
+    margin-left: 1px;
+  }
+
+  .navbar ul li p .b3 {
+    border-width: 80px;
+    width: 3px;
+    letter-spacing: -0.3px;
+    padding: 0;
+  }
+
+  .navbar ul li p .b4 {
+    width: 13px;
+  }
+
+/*
+  .buttons {
+    padding-top: 4px;
+    padding-left: 6px;
+    margin-right: 17px;
+    text-align: center;
+    height: 22px;
+    border: 1px solid black;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    color: #767e9e;
+  }*/
+
+  li {
+      cursor: pointer;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 220px);
+    grid-template-rows: repeat(3, 187px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding-top: 16px;
+  }
