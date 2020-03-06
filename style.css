@@ -19,6 +19,10 @@ header {
   display: flex;
 }
 
+figure {
+  min-width: 980px;
+}
+
 .logo {
   margin: 0 0 1px 41px;
   font-size: 25px;
@@ -54,7 +58,7 @@ span {
   text-decoration: none;
   color: white;
 }
-
+ 
 li.content :before {
   margin-right: 12px;
   content: '\00B7';
@@ -78,6 +82,7 @@ li.content :before {
 
 .Our_Services {
   height: 500px;
+  min-width: 1020px;
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
   box-sizing: border-box;
@@ -116,6 +121,8 @@ li.content :before {
 }
 
 .text_grid {
+  max-width: 219px;
+  max-height: 58px;
   margin-top: 10px;
   margin-right: 20px;
   margin-left: 1px;
@@ -126,6 +133,7 @@ li.content :before {
   letter-spacing: 0px;
   text-align: justify;
   color: #767e9e;
+  overflow: hidden;
 }
 
 .container_services {
@@ -281,6 +289,9 @@ p.buttons.b4 {
   font-family: "Lato";
   letter-spacing: -0.2px;
   color: #666d89;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 p.text.Adam::first-line {
@@ -294,17 +305,9 @@ p.text {
   font-weight: 400;
   font-size: 12px;
   font-family: "Lato";
-  line-height: 1.75em;
-  text-align: left;
+  line-height: 21px;
+  text-align: justify;
   color: #767e9e;
-}
-
-p.text.Desmond::first-line {
-  letter-spacing: 0.14px;
-}
-
-p.text.Scolara::first-line {
-  letter-spacing: 0.13px;
 }
 
 img.social:first-child {
@@ -332,7 +335,7 @@ img.social:hover {
   min-width: 1020px;
   height: 654px;
   background-color: #f06c64;
-  border-bottom: 6px solid #f06c64;
+  border-bottom: 6px solid #ea676b;
   box-sizing: border-box;
 }
 
@@ -347,21 +350,17 @@ img.social:hover {
   color: #f0d8d9;
 }
 
-.Fusce_text::first-line {
-  letter-spacing: 0.16px;
-}
-
 .Fusce_text {
   padding-top: 21px;
   padding-left: 40px;
-  padding-right: 30px;
+  padding-right: 39px;
   padding-bottom: 28px;
   font-size: 18px;
-  line-height: 1.7em;
+  line-height: 30px;
   font-weight: 300;
   font-family: Lato;
   color: #767e9e;
-  letter-spacing: 0px;
+  text-align: justify;
 }
 
 .Fusce_text.quote {
@@ -396,8 +395,9 @@ img.social_f:hover {
 }
 
 textarea {
+  
   width: 589px;
-  height: 190px;
+  height: 191px;
   margin-top: 16px;
   padding-top: 10px;
   padding-left: 15px;
@@ -455,7 +455,7 @@ input::placeholder {
 }
 
 form {
-  max-width: 625px;
+  max-width: 622px;
   padding-left: 40px;
 }
 
@@ -475,11 +475,12 @@ form {
   padding-right: 38.7px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.83em;
+  line-height: 22px;
   font-family: "Lato";
   text-align: justify;
   color: #f0d8d9;
   letter-spacing: 0px;
+  word-spacing: -0.1px;
 }
 
 .information_text::first-line {
@@ -508,7 +509,7 @@ form {
   display: grid;
   max-height: 617px;
   padding-left: 16px;
-  padding-top: 27px;
+  padding-top: 23px;
   grid-template-columns: 20px 300px;
   grid-template-rows: 19px 18px 25px;
   grid-column-gap: 3.5px;

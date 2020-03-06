@@ -241,8 +241,10 @@
                 </p>
                 <div class="flex_content">
                     <form>
-                        <input name="name" type="text" placeholder="Name (Required)" id="name" required>
-                        <input name="email" type="email" placeholder="Email (Required)" id="email" required>
+                        <input name="name" type="text" placeholder="Name (Required)" id="name" required
+                            pattern="^[a-zA-Zа-яА-ЯёЁ]+ [a-zA-Zа-яА-ЯёЁ]+$">
+                        <input name="email" type="email" placeholder="Email (Required)" id="email" required
+                            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$">
                         <input name="subject" type="text" placeholder="Subject" id="subject">
                         <textarea name="textarea" placeholder="Describe your project in detail..." id="project"
                             cols="30" rows="10"></textarea>
