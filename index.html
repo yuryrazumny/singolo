@@ -11,14 +11,14 @@
 </head>
 
 <body id="body">
-    <header id="home">
+    <header>
         <div class="wrapper flex">
             <div class="logo">
                 <h1>SINGOLO<span>*</span></h1>
             </div>
             <nav class="navbar_head">
                 <ul id="menu">
-                    <li><a class="active" href="#home">HOME</a></li>
+                    <li><a href="#home" class="active">HOME</a></li>
                     <li class="content"><a href="#Our-services">SERVICES</a></li>
                     <li class="content"><a href="#portfolio">PORTFOLIO</a></li>
                     <li class="content"><a href="#about-us">ABOUT</a></li>
@@ -27,10 +27,12 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main id="home">
         <section class="slider">
             <div class="wrapper flex">
                 <figure>
+                    <div class="offscreen1" style="display: none;"></div>
+                    <div class="offscreen2" style="display: none;"></div>
                     <img class="chev_left" src="assets/images/chev-left.png" alt="to the previous slide">
                     <img class="iphone1" src="assets/images/iphone_vertical.png" alt="vertical image of the iPhone">
                     <img class="iphone2" src="assets/images/iphone_horizontal.png" alt="horizontal image of the iPhone">
@@ -112,9 +114,9 @@
                     eget lacinia odio sem nec elit.
                 </p>
                 <nav class="navigation_bar">
-                    <ul class="navbar_buttons">
+                    <ul class="navbar_buttons" id="menu-portfolio">
                         <li>
-                            <p class="buttons b1">All</p>
+                            <p class="buttons b1 active">All</p>
                         </li>
                         <li>
                             <p class="buttons b2">Web Design</p>
@@ -127,7 +129,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="container_portfolio">
+                <div class="container_portfolio" id="portfolio-grid">
                     <div>
                         <img src="assets/images/ship.png" alt="ship picture">
                     </div>
@@ -240,7 +242,7 @@
                     tortor mauris condimentum nibh.
                 </p>
                 <div class="flex_content">
-                    <form>
+                    <form id="onsubmit">
                         <input name="name" type="text" placeholder="Name (Required)" id="name" required
                             pattern="^[a-zA-Zа-яА-ЯёЁ]+ [a-zA-Zа-яА-ЯёЁ]+$">
                         <input name="email" type="email" placeholder="Email (Required)" id="email" required

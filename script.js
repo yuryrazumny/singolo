@@ -1,18 +1,44 @@
 const MENU = document.getElementById("menu");
+const MENU_PORTFOLIO = document.getElementById("menu-portfolio");
 const BUTTON = document.getElementById("btn");
 const CLOSE_BUTTON = document.getElementById("close-btn");
+const PORTFOLIO = document.getElementById("portfolio-grid");
+const ONSUBMIT = document.getElementById("onsubmit");
+const iphone1 = document.querySelector(".iphone1");
+const iphone2 = document.querySelector(".iphone2");
+const offscreen1 = document.querySelector(".offscreen1");
+const offscreen2 = document.querySelector(".offscreen2");
+let screenoff1 = false;
+let screenoff2 = false;
+
+iphone1.addEventListener('click', (e) => {
+    screenoff1 = !screenoff1;
+    screenoff1 ? offscreen1.style.display = "block" : offscreen1.style.display = "none";
+});
+
+iphone2.addEventListener('click', (e) => {
+    screenoff2 = !screenoff2;
+    screenoff2 ? offscreen2.style.display = "block" : offscreen2.style.display = "none";
+});
+
+ONSUBMIT.addEventListener('submit', (e) => {
+    e.preventDefault();
+    return false;
+});
+
+MENU_PORTFOLIO.addEventListener('click', (event) => {
+    MENU_PORTFOLIO.querySelectorAll('p').forEach(el => el.classList.remove('active'));
+    event.target.classList.add('active');
+});
+
+PORTFOLIO.addEventListener('click', (event) => {
+    PORTFOLIO.querySelectorAll('img').forEach(el => el.classList.remove('active'));
+    event.target.classList.add('active');
+});
 
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
-    function toAnchor(anchor) {
-        window.location = "#" + anchor;
-    }
-    window.onclick = function () { toAnchor("home"); };
-    window.onclick = function () { toAnchor("Our-services"); };
-    window.onclick = function () { toAnchor("portfolio"); };
-    window.onclick = function () { toAnchor("about-us"); };
-    window.onclick = function () { toAnchor("get-quote"); };
 });
 
 BUTTON.addEventListener('click', (e) => {

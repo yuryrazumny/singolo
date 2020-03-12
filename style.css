@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -60,7 +64,7 @@ span {
   text-decoration: none;
   color: white;
 }
- 
+
 li.content :before {
   margin-right: 12px;
   content: '\00B7';
@@ -73,7 +77,7 @@ li.content :before {
 }
 
 .navbar_head ul li a:not(.active):hover {
-  color: #000000;
+  color: #f06c64;
 }
 
 .slider {
@@ -234,8 +238,6 @@ p.buttons.b1 {
   margin-left: 1px;
   padding: 4px 7px 4px 7.5px;
   width: 13px;
-  color: #dedede;
-  border-color: #c5c5c5;
 }
 
 p.buttons.b2 {
@@ -401,7 +403,6 @@ img.social_f:hover {
 }
 
 textarea {
-  
   width: 589px;
   height: 191px;
   margin-top: 16px;
@@ -585,6 +586,7 @@ form {
   border-radius: 5px;
   text-align: left;
 }
+
 #body.hide {
   overflow: hidden;
 }
@@ -594,8 +596,46 @@ span.messages {
   font-family: "Lato";
 }
 
-.message-block-btn{
+.message-block-btn {
   width: 40px;
   height: 30px;
   margin-top: 5px;
+}
+
+#portfolio div img.active {
+  position: absolute;
+  outline: #f06c64 solid 5px;
+}
+
+#menu-portfolio p.active {
+  color: #dedede;
+  border-color: #c5c5c5;
+}
+
+.offscreen2  {
+  position: absolute;
+  height: 190px;
+  width: 335px;
+  margin-top: 134px;
+  margin-left: 484px;
+  border-radius: 4px;
+  background-color: black;
+}
+
+.offscreen1  {
+  position: absolute;
+  height: 334px;
+  width: 190px;
+  margin-top: 65px;
+  margin-left: 125px;
+  border-radius: 4px;
+  background-color: black;
+}
+
+figure div {
+  display: none;
+}
+
+figure div.active {
+  display: block;
 }
