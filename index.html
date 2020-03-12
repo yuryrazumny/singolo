@@ -10,19 +10,19 @@
     <title>Singolo</title>
 </head>
 
-<body>
-    <header>
+<body id="body">
+    <header id="home">
         <div class="wrapper flex">
             <div class="logo">
                 <h1>SINGOLO<span>*</span></h1>
             </div>
             <nav class="navbar_head">
-                <ul>
-                    <li><a href="#"><span>HOME</span></a></li>
-                    <li class="content"><a href="#">SERVICES</a></li>
-                    <li class="content"><a href="#">PORTFOLIO</a></li>
-                    <li class="content"><a href="#">ABOUT</a></li>
-                    <li class="content"><a href="#">CONTACT</a></li>
+                <ul id="menu">
+                    <li><a class="active" href="#home">HOME</a></li>
+                    <li class="content"><a href="#Our-services">SERVICES</a></li>
+                    <li class="content"><a href="#portfolio">PORTFOLIO</a></li>
+                    <li class="content"><a href="#about-us">ABOUT</a></li>
+                    <li class="content"><a href="#get-quote">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,7 +38,7 @@
                 </figure>
             </div>
         </section>
-        <section class="Our_Services">
+        <section class="Our_Services" id="Our-services">
             <div class="wrapper">
                 <h1 class="headings">Our Services</h1>
                 <p class="Fusce_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -104,7 +104,7 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <div class="wrapper">
                 <h1 class="headings">Portfolio</h1>
                 <p class="portfolio_text">
@@ -167,7 +167,7 @@
                 </div>
             </div>
         </section>
-        <section class="about_us">
+        <section class="about_us" id="about-us">
             <div class="wrapper">
                 <h1 class="headings">About Us</h1>
                 <p class="Fusce_text">
@@ -228,7 +228,7 @@
                 </div>
             </div>
         </section>
-        <section class="Get_a_quote">
+        <section class="Get_a_quote" id="get-quote">
             <div class="wrapper">
                 <h1 class="headings h1_quote">
                     Get a Quote
@@ -248,7 +248,15 @@
                         <input name="subject" type="text" placeholder="Subject" id="subject">
                         <textarea name="textarea" placeholder="Describe your project in detail..." id="project"
                             cols="30" rows="10"></textarea>
-                        <button type="submit">Submit</button>
+                        <button id="btn">Submit</button>
+                        <div id="message-block" class="hidden">
+                            <div id="message" class="hidden">
+                                <p><span class="messages" id="result1"></span></p>
+                                <p><span class="messages" id="result2"></span></p>
+                                <p><span class="messages" id="result3"></span></p>
+                                <button class="message-block-btn" id="close-btn">OK</button>
+                            </div>
+                        </div>
                     </form>
                     <div class="information">
                         <h3 class="heading_contact">Contact Information</h3>
@@ -298,6 +306,7 @@
             </div>
         </footer>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
