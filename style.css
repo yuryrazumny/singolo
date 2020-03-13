@@ -5,6 +5,7 @@ html {
 header {
   position: sticky;
   top: 0;
+  z-index: 2;
   height: 95px;
   border-bottom: 6px solid #323746;
   background-color: #2d303a;
@@ -25,7 +26,7 @@ header {
   display: flex;
 }
 
-figure {
+.slideshow-container {
   min-width: 980px;
 }
 
@@ -89,6 +90,15 @@ li.content :before {
   margin: 0 auto;
   box-sizing: border-box;
 }
+.slider.blue {
+  height: 600px;
+  background-color: #648bf0;
+  border-bottom: 6px solid #348bf0;
+  display: block;
+  align-content: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 
 .Our_Services {
   height: 500px;
@@ -101,7 +111,7 @@ li.content :before {
 }
 
 .iphone1 {
-  margin-left: 50px;
+  margin-left: 54px;
   margin-bottom: 3px;
 }
 
@@ -111,13 +121,17 @@ li.content :before {
 }
 
 .chev_left {
+  height: 27px;
+  margin-top: 228px;
   margin-left: 42px;
-  margin-bottom: 231px;
+  /*margin-bottom: 231px;*/
 }
 
 .chev_right {
-  margin-left: 51px;
-  margin-bottom: 231px;
+  height: 27px;
+  margin-top: 228px;
+  margin-left: 55px;
+ /* margin-bottom: 231px;*/
 }
 
 .chev_left:hover {
@@ -578,11 +592,12 @@ form {
 
 #message {
   position: absolute;
-  min-width: 1020px;
+  min-width: 510px;
   padding: 10px 10px;
-  background-color: #f0f0f0;
-  top: 50%;
-  left: 20%;
+  background-color: #f06c64;
+  top: 40%;
+  left: 35%;
+  border: 2px solid #d6564f;
   border-radius: 5px;
   text-align: left;
 }
@@ -592,14 +607,19 @@ form {
 }
 
 span.messages {
-  color: black;
+  padding-left: 15px;
+  line-height: 40px;
+  font-size: 17px;
   font-family: "Lato";
+  font-weight: 700;
+  color: #f0d8d9;  
 }
 
 .message-block-btn {
-  width: 40px;
+  width: 100px;
   height: 30px;
-  margin-top: 5px;
+  margin-top: 40px;
+  margin-left: 40%;
 }
 
 #portfolio div img.active {
@@ -632,10 +652,17 @@ span.messages {
   background-color: black;
 }
 
-figure div {
-  display: none;
+.slideshow-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0;
 }
 
-figure div.active {
-  display: block;
+.bigger {
+  width: 851px;
+  height: 489px;
+}
+
+.iphones {
+  margin-left: 25%;
 }

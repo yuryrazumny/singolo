@@ -8,8 +8,27 @@ const iphone1 = document.querySelector(".iphone1");
 const iphone2 = document.querySelector(".iphone2");
 const offscreen1 = document.querySelector(".offscreen1");
 const offscreen2 = document.querySelector(".offscreen2");
+const CHEV_LEFT = document.querySelector(".chev_left");
+const CHEV_RIGHT = document.querySelector(".chev_right");
+let slider = document.getElementsByClassName("slider");
 let screenoff1 = false;
 let screenoff2 = false;
+
+CHEV_LEFT.addEventListener('click', (e) => {
+    plusSlides(-1);
+    if (slider[0].classList[1] == "blue") {
+        slider[0].classList.remove('blue');
+    }
+    else { slider[0].classList.add('blue'); }
+});
+
+CHEV_RIGHT.addEventListener('click', (e) => {
+    plusSlides(1);
+    if (slider[0].classList[1] == "blue") {
+        slider[0].classList.remove('blue');
+    }
+    else { slider[0].classList.add('blue'); }
+});
 
 iphone1.addEventListener('click', (e) => {
     screenoff1 = !screenoff1;
@@ -72,3 +91,29 @@ CLOSE_BUTTON.addEventListener('click', () => {
     document.getElementById('message-block').classList.add('hidden');
     document.getElementById('message').classList.add('hidden');
 });
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    offscreen1.style.display = "none";
+    screenoff1 = false;
+    offscreen2.style.display = "none";
+    screenoff2 = false;
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
