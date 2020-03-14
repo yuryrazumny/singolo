@@ -10,7 +10,8 @@
     <title>Singolo</title>
 </head>
 
-<body id="body">
+<body>
+    <div class="anchor" id="home"></div>
     <header>
         <div class="wrapper flex">
             <div class="logo">
@@ -27,25 +28,30 @@
             </nav>
         </div>
     </header>
-    <main id="home">
+    <main>
         <section class="slider">
             <div class="wrapper flex">
                 <div class="slideshow-container">
                     <div class="offscreen1" style="display: none;"></div>
                     <div class="offscreen2" style="display: none;"></div>
+                    <div class="offscreen3" style="display: none;"></div>
                     <img class="chev_left" src="assets/images/chev-left.png" alt="to the previous slide">
                     <div class="mySlides">
+                        <div class="iphone-button1"></div>
+                        <div class="iphone-button2"></div>
                         <img class="iphone1" src="assets/images/iphone_vertical.png" alt="vertical image of the iPhone">
                         <img class="iphone2" src="assets/images/iphone_horizontal.png" alt="horizontal image of the iPhone">
                     </div>
                     <div class="mySlides bigger" style="display: none;">
+                        <div class="iphone-button3"></div>
                         <img class="iphones" src="assets/images/slide2.png" alt="vertical image of the 3 iPhone's">
                     </div>
                     <img class="chev_right" src="assets/images/chev-right.png" alt="to the next slide">
                 </div>
             </div>
         </section>
-        <section class="Our_Services" id="Our-services">
+        <div class="anchor notheader" id="Our-services"></div>
+        <section class="Our_Services">
             <div class="wrapper">
                 <h1 class="headings">Our Services</h1>
                 <p class="Fusce_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -111,7 +117,8 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio" id="portfolio">
+        <div class="anchor notheader" id="portfolio"></div>
+        <section class="portfolio">
             <div class="wrapper">
                 <h1 class="headings">Portfolio</h1>
                 <p class="portfolio_text">
@@ -135,46 +142,47 @@
                     </ul>
                 </nav>
                 <div class="container_portfolio" id="portfolio-grid">
-                    <div>
+                    <div class="grid-item">
                         <img src="assets/images/ship.png" alt="ship picture">
                     </div>
-                    <div>
+                    <div class="grid-item">
                         <img src="assets/images/girl.png" alt="girl picture">
                     </div>
-                    <div>
+                    <div class="grid-item">
                         <img src="assets/images/town.png" alt="town picture">
                     </div>
-                    <div>
+                    <div class="grid-item">
                         <img src="assets/images/robot.png" alt="robot picture">
                     </div>
-                    <div>
+                    <div class="grid-item">
                         <img src="assets/images/animals.png" alt="animals picture">
                     </div>
-                    <div>
+                    <div class="grid-item">
                         <img src="assets/images/sdk.png" alt="sdk picture">
                     </div>
-                    <div>
+                    <div class="grid-item">
                         <img src="assets/images/aliens.png" alt="aliens picture">
                     </div>
-                    <div>
+                    <div class="grid-item">
                         <img src="assets/images/chickens.png" alt="chickens picture">
                     </div>
-                    <div>
+                    <div class="grid-item">
                         <img src="assets/images/monster.png" alt="monster picture">
                     </div>
-                    <div>
+                    <div class="grid-item">
                         <img src="assets/images/words.png" alt="words picture">
                     </div>
-                    <div>
+                    <div class="grid-item">
                         <img src="assets/images/vampir.png" alt="vampir picture">
                     </div>
-                    <div>
+                    <div class="grid-item">
                         <img src="assets/images/package.png" alt="package picture">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="about_us" id="about-us">
+        <div class="anchor notheader" id="about-us"></div>
+        <section class="about_us">
             <div class="wrapper">
                 <h1 class="headings">About Us</h1>
                 <p class="Fusce_text">
@@ -249,10 +257,10 @@
                 <div class="flex_content">
                     <form id="onsubmit">
                         <input name="name" type="text" placeholder="Name (Required)" id="name" required
-                            pattern="^[a-zA-Zа-яА-ЯёЁ]+ [a-zA-Zа-яА-ЯёЁ]+$">
+                            pattern="^[a-zA-Zа-яА-ЯёЁ]+ [a-zA-Zа-яА-ЯёЁ]+$" autocomplete="off">
                         <input name="email" type="email" placeholder="Email (Required)" id="email" required
-                            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$">
-                        <input name="subject" type="text" placeholder="Subject" id="subject">
+                            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+[.]+[a-z]{2,4}$" autocomplete="off">
+                        <input name="subject" type="text" placeholder="Subject" id="subject" autocomplete="off">
                         <textarea name="textarea" placeholder="Describe your project in detail..." id="project"
                             cols="30" rows="10"></textarea>
                         <button id="btn">Submit</button>
@@ -260,7 +268,7 @@
                             <div id="message" class="hidden">
                                 <p><span class="messages" id="result1"></span></p>
                                 <p><span class="messages" id="result2"></span></p>
-                                <p><span class="messages" id="result3"></span></p>
+                                <p class="text-message"><span class="messages" id="result3"></span></p>
                                 <button class="message-block-btn" id="close-btn">OK</button>
                             </div>
                         </div>
