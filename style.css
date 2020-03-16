@@ -121,14 +121,12 @@ li.content :before {
   height: 27px;
   margin-top: 228px;
   margin-left: 42px;
-  /*margin-bottom: 231px;*/
 }
 
 .chev_right {
   height: 27px;
   margin-top: 228px;
   margin-left: 55px;
-  /* margin-bottom: 231px;*/
 }
 
 .chev_left:hover {
@@ -636,7 +634,7 @@ span.messages {
   width: 100px;
   height: 30px;
   margin-top: 40px;
-  margin-left: 40%;
+  margin-left: 41%;
 }
 
 #portfolio-grid div img.active {
@@ -703,9 +701,10 @@ span.messages {
   position: absolute;
   width: 41px;
   height: 41px;
-  margin-top: 407px;
-  margin-left: 140px;
+  margin-top: 408px;
+  margin-left: 141px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .iphone-button3 {
@@ -715,6 +714,7 @@ span.messages {
   border-radius: 50%;
   margin-top: 433px;
   margin-left: 436px;
+  cursor: pointer;
 }
 
 .iphone-button2 {
@@ -724,6 +724,7 @@ span.messages {
   margin-top: 207px;
   margin-left: 375px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .anchor {
@@ -733,3 +734,4 @@ span.messages {
 .notheader {
   margin-top: -95px;
 }
+
