@@ -151,3 +151,22 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
 }
+
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event) {
+    const curPos = window.scrollY;
+    const divs = document.querySelectorAll('body .anchor');
+    const links = document.querySelectorAll('#menu a');
+
+    divs.forEach((el) => {
+        if (el.offsetTop - 2 < curPos) {
+            links.forEach((a) => {
+                a.classList.remove('active');
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('active');
+                }
+            })
+        }
+    });
+}
