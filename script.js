@@ -122,6 +122,7 @@ CLOSE_BUTTON.addEventListener('click', () => {
     document.getElementsByTagName('body')[0].classList.remove('hide');
     document.getElementById('message-block').classList.add('hidden');
     document.getElementById('message').classList.add('hidden');
+    ONSUBMIT.reset();
 });
 
 var slideIndex = 1;
