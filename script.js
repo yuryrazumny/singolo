@@ -10,29 +10,14 @@ const iphone3 = document.querySelector(".iphone-button3");
 const offscreen1 = document.querySelector(".offscreen1");
 const offscreen2 = document.querySelector(".offscreen2");
 const offscreen3 = document.querySelector(".offscreen3");
-const CHEV_LEFT = document.querySelector(".chev_left");
-const CHEV_RIGHT = document.querySelector(".chev_right");
 const GRID_ITEM = document.querySelectorAll(".grid-item");
 let slider = document.getElementsByClassName("slider");
 let screenoff1 = false;
 let screenoff2 = false;
 let screenoff3 = false;
-
-CHEV_LEFT.addEventListener('click', () => {
-    plusSlides(-1);
-    if (slider[0].classList[1] == "blue") {
-        slider[0].classList.remove('blue');
-    }
-    else { slider[0].classList.add('blue'); }
-});
-
-CHEV_RIGHT.addEventListener('click', () => {
-    plusSlides(1);
-    if (slider[0].classList[1] == "blue") {
-        slider[0].classList.remove('blue');
-    }
-    else { slider[0].classList.add('blue'); }
-});
+let items = document.querySelectorAll('.item');
+let currentItem = 0;
+let isEnabled = true;
 
 iphone1.addEventListener('click', () => {
     screenoff1 = !screenoff1;
@@ -125,34 +110,6 @@ CLOSE_BUTTON.addEventListener('click', () => {
     ONSUBMIT.reset();
 });
 
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    offscreen1.style.display = "none";
-    screenoff1 = false;
-    offscreen2.style.display = "none";
-    screenoff2 = false;
-    offscreen3.style.display = "none";
-    screenoff3 = false;
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-}
-
 document.addEventListener('scroll', onScroll);
 
 function onScroll(event) {
@@ -171,3 +128,56 @@ function onScroll(event) {
         }
     });
 }
+
+function changeCurrentItem(n) {
+    currentItem = (n + items.length) % items.length;
+}
+
+function hideItem(direction) {
+    isEnabled = false;
+    items[currentItem].classList.add(direction);
+    items[currentItem].addEventListener('animationend', function () {
+        this.classList.remove('active', direction);
+    })
+}
+
+function showItem(direction) {
+    items[currentItem].classList.add('next', direction);
+    items[currentItem].addEventListener('animationend', function () {
+        this.classList.remove('next', direction);
+        this.classList.add('active');
+        isEnabled = true;
+    })
+}
+
+function previousItem(n) {
+    hideItem('to-right');
+    changeCurrentItem(n - 1);
+    showItem('from-left');
+    if (slider[0].classList[1] == "blue") {
+        slider[0].classList.remove('blue');
+    }
+    else { slider[0].classList.add('blue'); }
+}
+
+function nextItem(n) {
+    hideItem('to-left');
+    changeCurrentItem(n + 1);
+    showItem('from-right');
+    if (slider[0].classList[1] == "blue") {
+        slider[0].classList.remove('blue');
+    }
+    else { slider[0].classList.add('blue'); }
+}
+
+document.querySelector('.control.left').addEventListener('click', function () {
+    if (isEnabled) {
+        previousItem(currentItem);
+    }
+});
+
+document.querySelector('.control.right').addEventListener('click', function () {
+    if (isEnabled) {
+        nextItem(currentItem);
+    }
+});

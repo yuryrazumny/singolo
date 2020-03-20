@@ -5,7 +5,7 @@ html {
 header {
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 1;
   height: 95px;
   border-bottom: 6px solid #323746;
   background-color: #2d303a;
@@ -24,10 +24,6 @@ header {
 
 .wrapper.flex {
   display: flex;
-}
-
-.slideshow-container {
-  min-width: 980px;
 }
 
 .logo {
@@ -108,25 +104,23 @@ li.content :before {
 }
 
 .iphone1 {
-  margin-left: 54px;
-  margin-bottom: 3px;
+  margin-left: 42px;
+  margin-top: 4px;
 }
 
 .iphone2 {
-  margin-bottom: 125px;
-  margin-left: 69px;
+  margin-top: 3px;
+  margin-right: 13px;
 }
 
 .chev_left {
-  height: 27px;
-  margin-top: 228px;
-  margin-left: 42px;
+  margin-bottom: 76px;
+  margin-left: 256px;
 }
 
 .chev_right {
-  height: 27px;
-  margin-top: 228px;
-  margin-left: 55px;
+  margin-right: 119px;
+  margin-bottom: 76px;
 }
 
 .chev_left:hover {
@@ -579,6 +573,7 @@ form {
 
 #message-block {
   position: fixed;
+  z-index: 2;
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -612,6 +607,7 @@ body.hide {
   max-height: 250px;
   padding-right: 10px;
   overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 .text-message::-webkit-scrollbar {
@@ -651,8 +647,8 @@ span.messages {
   position: absolute;
   height: 190px;
   width: 335px;
-  margin-top: 134px;
-  margin-left: 484px;
+  margin-top: -10px;
+  margin-left: 414px;
   border-radius: 4px;
   background-color: black;
 }
@@ -661,8 +657,8 @@ span.messages {
   position: absolute;
   display: block;
   width: 202px;
-  margin-left: 416px;
-  margin-top: 68px;
+  margin-left: 332px;
+  margin-top: -10px;
   height: 356px;
   border-radius: 4px;
   background-color: black;
@@ -672,25 +668,14 @@ span.messages {
   position: absolute;
   height: 334px;
   width: 190px;
-  margin-top: 65px;
-  margin-left: 125px;
+  margin-top: -8px;
+  margin-left: 55px;
   border-radius: 4px;
   background-color: black;
 }
 
-.slideshow-container {
-  display: flex;
-  max-width: 1000px;
-  margin: 0;
-}
-
-.bigger {
-  width: 851px;
-  height: 489px;
-}
-
 .iphones {
-  margin-left: 25%;
+  margin-left: 22%;
 }
 
 .last-item {
@@ -701,8 +686,8 @@ span.messages {
   position: absolute;
   width: 41px;
   height: 41px;
-  margin-top: 408px;
-  margin-left: 141px;
+  margin-top: 189px;
+  margin-left: 128px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -712,8 +697,8 @@ span.messages {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  margin-top: 433px;
-  margin-left: 436px;
+  margin-top: 200px;
+  margin-left: 410px;
   cursor: pointer;
 }
 
@@ -721,8 +706,8 @@ span.messages {
   position: absolute;
   width: 41px;
   height: 41px;
-  margin-top: 207px;
-  margin-left: 375px;
+  margin-top: -11px;
+  margin-left: 363px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -737,4 +722,110 @@ span.messages {
 
 #get-quote {
   margin-top: -225px;
+}
+
+.carousel {
+  position: absolute;
+  top: 12%;
+  left: 49%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.item-container {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+
+.item {
+  display: none;
+  height: 600px;
+  position: relative;
+  margin: 0 auto;
+  animation: 0.6s ease-in-out;
+}
+
+.active,
+.next {
+  display: block;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%; 
+}
+
+.description {
+  display: flex;
+  margin: 30px 20%;
+  font-size: 32px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  cursor: pointer;
+}
+
+.control.left {
+  left: 0;
+  right: auto;
+}
+
+.control.right {
+  left: auto;
+  right: 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow.right {
+  right: 50%;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+@keyframes left {
+  from {
+      left: 0;
+  }
+  to {
+      left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+      left: 100%;
+  }
+  to {
+      left: 0;
+  }
 }
