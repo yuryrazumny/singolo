@@ -27,7 +27,7 @@ header {
 }
 
 .logo {
-  margin: 0 0 1px 41px;
+  margin: 0 0 1px 40px;
   font-size: 25px;
   font-family: "Lato";
   font-weight: 700;
@@ -40,7 +40,7 @@ span {
 }
 
 .navbar_head {
-  width: 370px;
+  /* width: 370px; */
   margin: 10px 40px 0 0;
 }
 
@@ -64,6 +64,7 @@ span {
 
 li.content :before {
   margin-right: 12px;
+  margin-left: 11px;
   content: '\00B7';
   font: 2em sans-serif;
   color: #44495b;
@@ -104,23 +105,23 @@ li.content :before {
 }
 
 .iphone1 {
-  margin-left: 42px;
-  margin-top: 4px;
+  margin-left: 112px;
+  margin-top: 53px;
 }
 
 .iphone2 {
-  margin-top: 3px;
-  margin-right: 13px;
+  margin-top: 52px;
+  margin-right: 111px;
 }
 
 .chev_left {
-  margin-bottom: 76px;
-  margin-left: 256px;
+  margin-bottom: 8px;
+  margin-left: 42px;
 }
 
 .chev_right {
-  margin-right: 119px;
-  margin-bottom: 76px;
+  margin-right: -57px;
+  margin-bottom: 8px;
 }
 
 .chev_left:hover {
@@ -647,8 +648,8 @@ span.messages {
   position: absolute;
   height: 190px;
   width: 335px;
-  margin-top: -10px;
-  margin-left: 414px;
+  margin-top: 14px;
+  margin-left: 484px;
   border-radius: 4px;
   background-color: black;
 }
@@ -657,8 +658,8 @@ span.messages {
   position: absolute;
   display: block;
   width: 202px;
-  margin-left: 332px;
-  margin-top: -10px;
+  margin-left: 410px;
+  margin-top: 11px;
   height: 356px;
   border-radius: 4px;
   background-color: black;
@@ -668,14 +669,15 @@ span.messages {
   position: absolute;
   height: 334px;
   width: 190px;
-  margin-top: -8px;
-  margin-left: 55px;
+  margin-top: 17px;
+  margin-left: 125px;
   border-radius: 4px;
   background-color: black;
 }
 
 .iphones {
-  margin-left: 22%;
+  margin-left: 26%;
+  padding-top: 43px;
 }
 
 .last-item {
@@ -686,8 +688,8 @@ span.messages {
   position: absolute;
   width: 41px;
   height: 41px;
-  margin-top: 189px;
-  margin-left: 128px;
+  margin-top: 213px;
+  margin-left: 199px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -697,8 +699,8 @@ span.messages {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  margin-top: 200px;
-  margin-left: 410px;
+  margin-top: 221px;
+  margin-left: 489px;
   cursor: pointer;
 }
 
@@ -706,8 +708,8 @@ span.messages {
   position: absolute;
   width: 41px;
   height: 41px;
-  margin-top: -11px;
-  margin-left: 363px;
+  margin-top: 13px;
+  margin-left: 434px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -725,17 +727,19 @@ span.messages {
 }
 
 .carousel {
-  position: absolute;
-  top: 12%;
-  left: 49%;
+  position: relative;
+  top: 51%;
+  left: 50%;
   width: 100%;
+  height: 600px;
   text-align: center;
   transform: translate(-50%, -50%);
 }
 
 .item-container {
-  position: absolute;
+  position: relative;
   width: 100%;
+  height: 600px;
   overflow: hidden;
 }
 
@@ -760,7 +764,7 @@ span.messages {
 
 .description {
   display: flex;
-  margin: 30px 20%;
+  /* margin: 30px 20%; */
   font-size: 32px;
   justify-content: space-between;
   align-items: center;

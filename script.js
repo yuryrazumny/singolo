@@ -69,7 +69,9 @@ MENU_PORTFOLIO.addEventListener('click', (event) => {
 
 PORTFOLIO.addEventListener('click', (event) => {
     PORTFOLIO.querySelectorAll('img').forEach(el => el.classList.remove('active'));
-    event.target.classList.add('active');
+    if (event.target.tagName == "IMG") {
+        event.target.classList.add('active');
+    }
 });
 
 MENU.addEventListener('click', (event) => {
