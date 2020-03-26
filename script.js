@@ -11,6 +11,7 @@ const offscreen1 = document.querySelector(".offscreen1");
 const offscreen2 = document.querySelector(".offscreen2");
 const offscreen3 = document.querySelector(".offscreen3");
 const GRID_ITEM = document.querySelectorAll(".grid-item");
+const MENU_BTN = document.querySelector(".menu-btn");
 let slider = document.getElementsByClassName("slider");
 let screenoff1 = false;
 let screenoff2 = false;
@@ -18,6 +19,31 @@ let screenoff3 = false;
 let items = document.querySelectorAll('.item');
 let currentItem = 0;
 let isEnabled = true;
+
+MENU_BTN.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (e.target.tagName === "A") {
+        if (e.target.classList[1] == 'active') {
+            e.target.classList.remove('active');
+            document.getElementById('burger-block').classList.add('hidden');
+        }
+        else {
+            e.target.classList.add('active');
+            document.getElementById('burger-block').classList.remove('hidden');
+        }
+    }
+
+    else {
+        if (e.target.parentElement.classList[1] == 'active') {
+            e.target.parentElement.classList.remove('active');
+            document.getElementById('burger-block').classList.add('hidden');
+        }
+        else {
+            e.target.parentElement.classList.add('active');
+            document.getElementById('burger-block').classList.remove('hidden');
+        }
+    }
+});
 
 iphone1.addEventListener('click', () => {
     screenoff1 = !screenoff1;
@@ -77,6 +103,8 @@ PORTFOLIO.addEventListener('click', (event) => {
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
+    document.getElementById('burger-block').classList.add('hidden');
+    document.querySelector('.menu-btn').classList.remove('active');
 });
 
 BUTTON.addEventListener('click', (e) => {
