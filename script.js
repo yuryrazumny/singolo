@@ -1,5 +1,4 @@
 const MENU = document.getElementById("menu");
-const MENU_PORTFOLIO = document.getElementById("menu-portfolio");
 const BUTTON = document.getElementById("btn");
 const CLOSE_BUTTON = document.getElementById("close-btn");
 const PORTFOLIO = document.getElementById("portfolio-grid");
@@ -63,34 +62,6 @@ iphone3.addEventListener('click', () => {
 ONSUBMIT.addEventListener('submit', (e) => {
     e.preventDefault();
     return false;
-});
-
-MENU_PORTFOLIO.addEventListener('click', (event) => {
-    MENU_PORTFOLIO.querySelectorAll('p').forEach(el => el.classList.remove('active'));
-    event.target.classList.add('active');
-    if (event.target.classList[1] == 'b1') {
-        GRID_ITEM[0].classList.remove('last-item');
-        GRID_ITEM[1].classList.remove('last-item');
-        GRID_ITEM[2].classList.remove('last-item');
-    };
-    if (event.target.classList[1] == 'b2') {
-        GRID_ITEM[0].classList.remove('last-item');
-        GRID_ITEM[1].classList.remove('last-item');
-        GRID_ITEM[2].classList.remove('last-item');
-        GRID_ITEM[0].classList.add('last-item');
-    };
-    if (event.target.classList[1] == 'b3') {
-        GRID_ITEM[0].classList.remove('last-item');
-        GRID_ITEM[1].classList.remove('last-item');
-        GRID_ITEM[2].classList.remove('last-item');
-        GRID_ITEM[0].classList.add('last-item');
-        GRID_ITEM[1].classList.add('last-item');
-    };
-    if (event.target.classList[1] == 'b4') {
-        GRID_ITEM[0].classList.add('last-item');
-        GRID_ITEM[1].classList.add('last-item');
-        GRID_ITEM[2].classList.add('last-item');
-    };
 });
 
 PORTFOLIO.addEventListener('click', (event) => {
@@ -211,3 +182,38 @@ document.querySelector('.control.right').addEventListener('click', function () {
         nextItem(currentItem);
     }
 });
+
+const navButtons = document.querySelector('.navbar_buttons');
+const button = navButtons.querySelectorAll('.buttons');
+
+button.forEach(i => {
+    i.addEventListener('click', () => {
+        let gallery = document.querySelector('.container_portfolio');
+        let pictures = Array.from(gallery.querySelectorAll('.grid-item'));
+        let temp = [];
+        for (i = 0; i < pictures.length - 1; i++) {
+            temp.push(pictures[i + 1]);
+            if (i === pictures.length - 2) {
+                temp.push(pictures[0])
+            }
+        }
+        if (button[1].classList[2] !== 'active') {
+            gallery.innerHTML = "";
+            console.log(button[0].classList[2]);
+            temp.forEach(pic => gallery.append(pic))
+        }
+    })
+})
+
+navButtons.addEventListener('click', (event) => {
+    button.forEach(i => {
+        if (event.target !== i) {
+            i.classList.remove('active');
+
+        }
+        else {
+            i.classList.add('active');
+
+        }
+    });
+})
