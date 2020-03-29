@@ -30,9 +30,9 @@ header {
 .menu-btn {
   display: none;
   position: absolute;
-  top: 30px;
-  left: 15px;
-  width: 25px;
+  top: 23px;
+  left: 19px;
+  width: 28px;
   height: 26px;
   background-color: #2d303a;
 }
@@ -42,8 +42,8 @@ header {
   top: 50%;
   margin-top: -1px;
   left: 50%;
-  margin-left: -10px;
-  width: 20px;
+  margin-left: -13px;
+  width: 25px;
   height: 2px;
   background-color: #ffffff;
 }
@@ -55,11 +55,11 @@ header {
 }
 
 .menu-btn span::before {
-  transform: translateY(-7px);
+  transform: translateY(-9px);
 }
 
 .menu-btn span::after {
-  transform: translateY(7px);
+  transform: translateY(9px);
 }
 
 .menu-btn.active {
@@ -118,7 +118,7 @@ li.content :before {
 }
 
 .slider {
-  height: 60vw;
+  height: 59vw;
   max-height: 600px;
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
@@ -143,26 +143,26 @@ li.content :before {
 }
 
 .iphone1 {
-  margin-left: 72px;
-  margin-right: 73px;
-  margin-top: 53px;
+  margin-left: 7.5%;
+  margin-right: 7.8%;
+  margin-top: 5.6%;
   width: 26%;
 }
 
 .iphone2 {
-  margin-top: 52px;
-  margin-right: 71px;
-  width: 52%;
+  margin-top: 6%;
+  margin-right: 8%;
+  width: 51.4%;
 }
 
 .chev_left {
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   margin-left: 2px;
 }
 
 .chev_right {
-  margin-right: -14px;
-  margin-bottom: 8px;
+  margin-right: -40px;
+  margin-bottom: 2px;
 }
 
 .chev_left:hover {
@@ -271,9 +271,8 @@ li.content :before {
 }
 
 p.buttons.b1 {
-  margin-left: 1px;
-  padding: 4px 7px 4px 7.5px;
-  width: 13px;
+  padding: 4px 6px;
+  width: 15px;
 }
 
 p.buttons.b2 {
@@ -285,14 +284,14 @@ p.buttons.b2 {
 
 p.buttons.b3 {
   width: 90px;
-  margin-left: 10px;
-  padding: 4px 1px 4px 0px;
+  margin-left: 11px;
+  padding: 4px 1px;
 }
 
 p.buttons.b4 {
   width: 50px;
   margin-left: 10px;
-  padding: 4px 2px 4px 3px;
+  padding: 4px 3px;
 }
 
 .buttons:hover {
@@ -323,10 +322,6 @@ p.buttons.b4 {
   margin-left: 2px;
 }
 
-.scolara h2.Name {
-  letter-spacing: 0px;
-}
-
 .text.Desmond {
   padding-right: 1px;
 }
@@ -335,7 +330,6 @@ p.buttons.b4 {
   font-size: 18px;
   font-weight: 900;
   font-family: "Lato";
-  letter-spacing: -0.2px;
   color: #666d89;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -343,7 +337,7 @@ p.buttons.b4 {
 }
 
 .Name.scolara {
-  letter-spacing: 0px;
+  letter-spacing: -0.2px;
 }
 
 p.text.Adam::first-line {
@@ -671,35 +665,30 @@ span.messages {
 
 .offscreen2 {
   position: absolute;
-  height: 190px;
-  width: 335px;
-  margin-top: 14px;
-  margin-left: 444px;
+  top: calc(85 * 100% / 240);
+  left: calc(228 * 100% / 484);
+  width: calc(172 * 100% / 484);
+  height: calc(85 * 100% / 240);
   border-radius: 4px;
   background-color: black;
 }
 
 .offscreen3 {
   position: absolute;
-  display: block;
   top: calc(113.5 * 100% / 513);
   left: calc(105 * 100% / 255);
   width: calc(53.5 * 100% / 255);
   height: calc(320 * 100% / 513);
-  /* width: 199px;
-  margin-left: 386px;
-  margin-top: 18px; */
-  /* height: 349px; */
   border-radius: 4px;
   background-color: black
 }
 
 .offscreen1 {
   position: absolute;
-  height: 334px;
-  width: 190px;
-  margin-top: 17px;
-  margin-left: 85px;
+  top: calc(112.5 * 100% / 513);
+  left: calc(23 * 100% / 255);
+  width: calc(51.5 * 100% / 255);
+  height: calc(320 * 100% / 513);
   border-radius: 4px;
   background-color: black;
 }
@@ -707,35 +696,35 @@ span.messages {
 .iphones {
   margin-left: 26%;
   width: 54%;
-  padding-top: 57px;
+  padding-top: 6%;
 }
 
 .iphone-button1 {
   position: absolute;
-  width: 41px;
-  height: 41px;
-  margin-top: 214px;
-  margin-left: 158px;
+  bottom: calc(31.5 * 100% / 513);
+  left: calc(85.5 * 100% / 513);
+  width: calc(44 * 100% / 983);
+  height: calc(44 * 100% / 573);
   border-radius: 50%;
   cursor: pointer;
 }
 
 .iphone-button3 {
   position: absolute;
-  width: 44px;
-  height: 44px;
+  bottom: calc(30.5 * 100% / 513);
+  left: calc(252.5 * 100% / 513);
+  width: calc(44 * 100% / 983);
+  height: calc(44 * 100% / 573);
   border-radius: 50%;
-  margin-top: 221px;
-  margin-left: 467px;
   cursor: pointer;
 }
 
 .iphone-button2 {
   position: absolute;
-  width: 41px;
-  height: 41px;
-  margin-top: 14px;
-  margin-left: 394px;
+  bottom: calc(223 * 100% / 513);
+  left: calc(213.5 * 100% / 513);
+  width: calc(44 * 100% / 983);
+  height: calc(44 * 100% / 573);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -771,7 +760,6 @@ span.messages {
 
 .item {
   display: none;
-  /* height: 600px; */
   position: relative;
   margin: 0 auto;
   animation: 0.6s ease-in-out;
@@ -816,10 +804,6 @@ span.messages {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.arrow.right {
-  right: 50%;
 }
 
 .to-left {
@@ -875,49 +859,192 @@ span.messages {
 }
 
 @media only screen and (max-width: 1019px) and (min-width: 768px) {
+  .slider .wrapper {
+    padding: 0 30px;
+  }
+  .navbar_head {
+    margin: 5px 0 0 0;
+  }
+  .portfolio {
+    padding-top: 21px;
+    padding-bottom: 1px;
+  }
+  .item-container {
+    overflow: visible;
+  }
+  .about_us {
+    padding-top: 14px;
+  }
+  .headings {
+    padding-top: 41px;
+  }
+  .navigation_bar {
+    margin-top: 30px;
+  }
+  .iphone1 {
+    margin-left: 7.5%;
+    margin-right: 7.8%;
+    margin-top: 5.7%;
+    width: 25.6%;
+  }
+  .iphone2 {
+    margin-top: 6%;
+    margin-right: 8%;
+    width: 51.4%;
+  }
+  .chev_left {
+    margin-top: 4px;
+    margin-left: 0;
+  }
+  .chev_right {
+    margin-right: -32px;
+    margin-top: 7px;
+  }
   .container_services {
+    margin-top: 37px;
+    padding-bottom: 70px;
     grid-template-columns: repeat(2, 60px auto);
     grid-column-gap: 20px;
+    grid-row-gap: 53px;
   }
   .container_portfolio {
+    padding-top: 25px;
+    padding-bottom: 66px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    line-height: 0;
+  }
+  .container_photo {
+    padding-top: 38px;
+    grid-column-gap: 15px;
+    grid-row-gap: 8px;
+  }
+  img.social {
+    margin-top: 13px;
+  }
+  p.text {
+    padding-top: 3px;
   }
   form {
     max-width: 65%;
+    margin-top: 4px;
+  }
+  .flex_content {
+    margin-top: 9px;
+  }
+  .Get_a_quote {
+    padding-top: 17px;
+    padding-bottom: 41px;
+  }
+  input {
+    margin-top: 12px;
+  }
+  textarea {
+    margin-top: 12px;
+    height: 147px;
+  }
+  button {
+    width: 31%;
+  }
+  .Fusce_text {
+    padding-bottom: 0px;
   }
   .information {
     max-width: 35%;
-    padding-left: 10px;
+    padding-left: 7px;
+  }
+  .information_text {
+    padding-top: 3px;
+  }
+  .container_information {
+    padding-left: 20px;
+    padding-top: 13px;
   }
   #burger-block {
     display: none;
   }
-}
-
-@media only screen and (max-width: 600px) {
-  .iphones {
-    padding-top: 43px;
+  #get-quote {
+    margin-top: -125px;
   }
 }
 
-@media only screen and (max-width: 400px) {
-  .iphones {
-    padding-top: 36px;
+@media only screen and (max-width: 323px) {
+  p.buttons.b1 {
+    width: 10px;
+  }
+  p.buttons.b2 {
+    margin-left: 2px;
+  }
+  p.buttons.b3 {
+    width: 85px;
+    margin-left: 2px;
+  }
+  p.buttons.b4 {
+    width: 45px;
+    margin-left: 2px;
   }
 }
 
 @media only screen and (max-width: 767px) and (min-width: 300px) {
+  .notheader {
+    margin-top: -70px;
+  }
+  #get-quote {
+    margin-top: -70px;
+  }
+  header {
+    height: 71px;
+  }
+  .wrapper {
+    padding: 0 30px;
+  }
+  .slider .wrapper {
+    padding: 0 10px;
+  }
+  .logo {
+    margin: 7px 0 0 12px;
+    font-size: 19px;
+    font-family: "Lato";
+    font-weight: 700;
+    letter-spacing: 0;
+    color: white;
+  }
   .logo.burger {
-    padding: 33px 0 0 71px;
-    font-size: 20px;
+    padding: 20px 0 0 59px;
+    font-size: 19px;
+  }
+  .chev_left {
+    margin-top: 8px;
+    margin-left: 0px;
   }
   .chev_right {
-    margin-right: -3px;
-    margin-bottom: 8px;
-}
+    margin-right: 0px;
+    margin-top: 8px;
+  }
+  .iphone1 {
+    margin-left: 8.5%;
+    margin-right: 7.8%;
+    margin-top: 5.5%;
+    width: 25%;
+  }
+  .offscreen1 {
+    position: absolute;
+    left: calc(25.5 * 100% / 255);
+    width: calc(50 * 100% / 255);
+  }
+  .iphone2 {
+    margin-top: 6%;
+    margin-right: 9.1%;
+    width: 50%;
+  }
+  .headings {
+    padding-top: 28px;
+  }
   .navbar_head {
     display: none;
+  }
+  .item-container {
+    overflow: visible;
   }
   .navbar_head_mobile a {
     display: flex;
@@ -935,7 +1062,9 @@ span.messages {
     color: #f06c64;
   }
   #menu {
-    margin-top: 140px;
+    margin-top: 158px;
+    line-height: 1.15;
+    letter-spacing: -1px;
   }
   #burger-block.hidden {
     display: none;
@@ -957,7 +1086,6 @@ span.messages {
     left: 0;
     width: 278px;
     height: 100%;
-    padding: 10px 10px;
     background-color: #2d303a;
     border-radius: 5px;
     text-align: left;
@@ -968,44 +1096,86 @@ span.messages {
     z-index: 3;
   }
   .container_services {
+    margin-top: 32px;
+    padding-bottom: 21px;
     grid-template-columns: 60px auto;
     grid-column-gap: 20px;
+    grid-row-gap: 28px;
   }
   .container_portfolio {
+    padding-top: 22px;
+    padding-bottom: 35px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-gap: 12px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 14px;
+    line-height: 0;
+  }
+  .portfolio {
+    padding-top: 17px;
   }
   .portfolio_text {
-    line-height: 1.5em;
+    padding-top: 23px;
+    line-height: 1.65em;
   }
   .grid-item:nth-child(n + 9) {
     display: none;
   }
+  .about_us {
+    padding-top: 8px;
+  }
   .container_photo {
     display: grid;
-    padding-top: 17px;
+    padding-top: 26px;
     padding-bottom: 0;
     grid-column-gap: 19px;
     grid-row-gap: 14px;
     grid-template-columns: 1fr;
   }
   .container_information {
+    padding-top: 14px;
+    padding-bottom: 31px;
     padding-left: 0px;
-    padding-top: 12px;
+    grid-row-gap: 3px;
+  }
+  p.text {
+    padding-top: 3px;
+  }
+  img.social {
+    margin-top: 13px;
+  }
+  .desmond {
+    margin-top: 17px;
   }
   .adam {
     order: -1;
   }
   .scolara {
     order: 1;
-    padding-bottom: 20px;
   }
-  .container_photo div:nth-child(n + 3) {
-    padding-bottom: 10px;
+  .scolara.mobile {
+    margin-top: 17px;
   }
   .container_photo div.scolara:last-child {
-    padding-bottom: 30px;
+    padding-bottom: 36px;
+  }
+  .Get_a_quote {
+    padding-top: 19px;
+  }
+  input:first-child {
+    margin-top: 25px;
+    height: 35px;
+  }
+  input:nth-child(n + 2) {
+    margin-top: 12px;
+    height: 35px;
+  }
+  textarea {
+    margin-top: 12px;
+    height: 147px;
+  }
+  button {
+    height: 54px;
+    margin-top: 9px;
   }
   .container_information img {
     padding-left: 0;
@@ -1023,11 +1193,11 @@ span.messages {
     max-width: 100%;
   }
   .heading_contact {
-    padding-top: 25px;
+    padding-top: 30px;
     padding-left: 0px;
   }
   .information_text {
-    padding-top: 10px;
+    padding-top: 3px;
     padding-left: 0px;
   }
   .copyright {
@@ -1039,27 +1209,5 @@ span.messages {
   }
   button {
     width: 100%;
-  }
-  /* max-width 400  */
-  p.buttons.b1 {
-    /* margin-left: 1px; */
-    padding: 4px 4px 4px 4px;
-    width: 13px;
-  }
-  p.buttons.b2 {
-    padding: 4px 3px 4px 3px;
-    width: 64px;
-    letter-spacing: -0.05px;
-    margin-left: 2px;
-  }
-  p.buttons.b3 {
-    width: 90px;
-    margin-left: 2px;
-    padding: 4px 0;
-  }
-  p.buttons.b4 {
-    width: 50px;
-    margin-left: 2px;
-    padding: 4px 2px 4px 3px;
   }
 }

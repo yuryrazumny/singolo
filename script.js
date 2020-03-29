@@ -197,11 +197,9 @@ button.forEach(i => {
                 temp.push(pictures[0])
             }
         }
-        if (button[1].classList[2] !== 'active') {
-            gallery.innerHTML = "";
-            console.log(button[0].classList[2]);
-            temp.forEach(pic => gallery.append(pic))
-        }
+        gallery.innerHTML = "";
+        console.log(button[0].classList[2]);
+        temp.forEach(pic => gallery.append(pic))
     })
 })
 
